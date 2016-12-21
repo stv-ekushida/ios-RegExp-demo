@@ -30,7 +30,7 @@ extension String {
         return (self =~ "^\\d{2,4}-\\d{1,4}-\\d{4}$")
     }
 
-    func isday(format: String) -> Bool {
+    func isdate(format: String) -> Bool {
         return (self =~ "^\\d{4}\(format)\\d{1,2}\(format)\\d{1,2}$")
     }
 
