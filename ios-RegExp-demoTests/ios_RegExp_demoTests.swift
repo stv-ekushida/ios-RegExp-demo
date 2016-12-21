@@ -60,21 +60,21 @@ class ios_RegExp_demoTests: XCTestCase {
         XCTAssertFalse("031234-5678".isTelephone())
     }
 
-    func testDay() {
-        XCTAssertTrue("2016-1-1".isday(format:"-"))
-        XCTAssertTrue("2016-12-19".isday(format:"-"))
-        XCTAssertTrue("2016/12/19".isday(format:"/"))
-
-        XCTAssertFalse("2016/12/19".isday(format:"-"))
-        XCTAssertFalse("20166-12-19".isday(format:"-"))
-        XCTAssertFalse("2016-123-19".isday(format:"-"))
-        XCTAssertFalse("2016-12-191".isday(format:"-"))
-        XCTAssertFalse("201-12-19".isday(format:"-"))
-        XCTAssertFalse("201612-19".isday(format:"-"))
-        XCTAssertFalse("2016-1219".isday(format:"-"))
-        XCTAssertFalse("201a-12-19".isday(format:"-"))
-        XCTAssertFalse("2016-1a-19".isday(format:"-"))
-        XCTAssertFalse("2016-12-1a".isday(format:"-"))
+    func testDate() {
+        XCTAssertTrue("2016-1-1".isdate(format:"-"))
+        XCTAssertTrue("2016-12-19".isdate(format:"-"))
+        XCTAssertTrue("2016/12/19".isdate(format:"/"))
+        
+        XCTAssertFalse("2016/12/19".isdate(format:"-"))
+        XCTAssertFalse("20166-12-19".isdate(format:"-"))
+        XCTAssertFalse("2016-123-19".isdate(format:"-"))
+        XCTAssertFalse("2016-12-191".isdate(format:"-"))
+        XCTAssertFalse("201-12-19".isdate(format:"-"))
+        XCTAssertFalse("201612-19".isdate(format:"-"))
+        XCTAssertFalse("2016-1219".isdate(format:"-"))
+        XCTAssertFalse("201a-12-19".isdate(format:"-"))
+        XCTAssertFalse("2016-1a-19".isdate(format:"-"))
+        XCTAssertFalse("2016-12-1a".isdate(format:"-"))
     }
 
     func testTime() {
